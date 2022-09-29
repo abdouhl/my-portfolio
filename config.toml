@@ -1,4 +1,4 @@
-baseURL = "elhellal.com"
+baseURL = "https://www.elhellal.com/"
 title = "Abdou HLL"
 theme = "hugo-coder"
 languageCode = "en"
