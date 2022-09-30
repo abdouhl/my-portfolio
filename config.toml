@@ -30,7 +30,7 @@ since = 2019
 # Git Commit in Footer, uncomment the line below to enable it
 commit = "https://github.com/luizdepra/hugo-coder/tree/"
 # Right To Left, shift content direction for languagues such as Arabic
-rtl = true
+rtl = false
 # Specify light/dark colorscheme
 # Supported values:
 # "auto" (use preference set by browser)
@@ -169,34 +169,3 @@ url = "projects/"
 name = "Contact me"
 weight = 5
 url = "contact/"
-
-[languages.ar]
-languageName = ":algeria:"
-title = "عبد الرحمان"
-
-[languages.ar.params]
-author = "عبد الرحمان هلال"
-info = "مبرمج"
-description = "موقع شخصي لعبد الرحمان هلال"
-keywords = "مبرمج,عبد الرحمان هلال,شخصي"
-
-[[languages.ar.menu.main]]
-name = "حول"
-weight = 1
-url = "about/"
-
-[[languages.ar.menu.main]]
-name = "مدونة"
-weight = 2
-url = "posts/"
-
-[[languages.ar.menu.main]]
-name = "مشاريع"
-weight = 3
-url = "projects/"
-
-[[languages.ar.menu.main]]
-name = "تواصل"
-weight = 5
-url = "contact/"
-
