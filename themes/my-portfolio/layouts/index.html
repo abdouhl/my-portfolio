@@ -16,7 +16,7 @@
     		$.getJSON( "posts/index.json", function( data ) {
     		$.each( data, function( index ) {
     			var json_url = data[index]["post"][0] ;
-					if(json_url == "http://localhost:1313"+url){
+					if(json_url == "https://www.elhellal.com"+url){
 						title = data[index]["post"][1] ;
 					  content = $.parseHTML(data[index]["post"][2].replaceAll('\n', '')) ;
 					  content = content
