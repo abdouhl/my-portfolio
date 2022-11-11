@@ -1,0 +1,11 @@
+a {
+  text-decoration-style: dotted;
+  color: white;
+}
+
+a:hover {
+  text-decoration-style: solid;
+}
+li {
+  padding: 2px;
+}
