@@ -9,6 +9,14 @@
 A passionate python developer from Algeria                                                                                                                                  
 </template>
   <script>
+  var banner = [
+        '  ____ ___ _____ ',
+        ' / ___|_ _|_   _| __      __   _      _____              _           _',
+        '| |  _ | |  | |   \\ \\    / /__| |__  |_   _|__ _ _ _ __ (_)_ _  __ _| |',
+        '| |_| || |  | |    \\ \\/\\/ / -_) \'_ \\   | |/ -_) \'_| \'  \\| | \' \\/ _` | |',
+        ' \\____|___| |_|     \\_/\\_/\\___|_.__/   |_|\\___|_| |_|_|_|_|_||_\\__,_|_|'
+    ];
+    
   $('body').terminal({
     cat: function(width, height) {
         const img = $('<img src="https://placekitten.com/' +
@@ -16,8 +24,17 @@ A passionate python developer from Algeria
         this.echo(img);
     }
 }, {
-    greetings: greetings.innerHTML
+    greetings: false,
+    onInit() {
+    
+    	    var title = this.cols() > banner[1].length ? banner.join('\n') : 'GIT Web Terminal';
+    	    title = title + '\n\n' + 'use [[;#fff;]help] to see the available commands' +
+               ' or [[;#fff;]credits] to list the projects used\n';
+            this.echo(title)
+              
+        }
 });
 $('[data-index="0"]').children().children().css({"color": "red", "white-space": "pre"});
-  </script>
+console.log($('[data-index="0"]').children(":nth-child(4)"))
+ </script>
 {{ end }}
