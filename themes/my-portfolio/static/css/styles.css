@@ -1,4 +1,11 @@
+h1, h2, h3, h4, h5, h6, b {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
 a.title {
+  text-decoration: underline;
   text-decoration-style: dotted;
   color: white;
 }
@@ -9,7 +16,8 @@ a.title:hover {
 li {
   padding: 2px;
 }
-.image-card {
+.image-card2 {
+  height:200px;
 	border-style: dotted;
 	border-color: white;
   margin: 5px;
@@ -19,7 +27,7 @@ li {
   cursor: pointer;
 }
 
-.image-card:hover {
+.image-card2:hover {
 	border-style: solid;
 }
 
