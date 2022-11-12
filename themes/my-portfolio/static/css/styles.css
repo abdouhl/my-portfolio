@@ -14,7 +14,11 @@ li {
 	border-color: white;
   margin: 5px;
   padding:10px; 
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
+
 .image-card:hover {
 	border-style: solid;
 }

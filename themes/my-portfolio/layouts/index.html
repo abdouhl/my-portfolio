@@ -17,7 +17,7 @@
       projects: function() {
 
     {{ with .Site.GetPage "section" "projects" }}
-        var projects = $('<div class="pure-g">{{- range .Pages -}}<div class="image-card pure-u-1-3">{{ $img_screen := .Resources.GetMatch "screen.png" }}<img src="{{ $img_screen.Permalink }}" alt="{{ .Title }} image" style="height:200px;margin-right:15px;float: left;" ><div><h3>{{ .Title }}</h3><p>{{ .Params.description }}</p><div><dl><dt>tools</dt>{{ range .Params.tools }}<dd>- {{.}}</dd> {{- end -}}</dl></div></div></div>{{- end -}}</div>');
+        var projects = $('<div class="pure-g">{{- range .Pages -}}<div class="image-card pure-u-1 pure-u-md-1-2 pure-u-lg-1-3 pure-u-xxl-1-4" onclick="'+"window.location.href='{{ .Params.link }}';"+'">{{ $img_screen := .Resources.GetMatch "screen.png" }}<img src="{{ $img_screen.Permalink }}" alt="{{ .Title }} image" style="height:200px;margin-right:15px;float: left;" ><div><h3>{{ .Title }}</h3><p>{{ .Params.description }}</p><div><dl><dt>tools</dt>{{ range .Params.tools }}<dd>- {{.}}</dd> {{- end -}}</dl></div></div></div>{{- end -}}</div>');
 /*
 <div class="pure-g">
 {{- range .Pages -}}
