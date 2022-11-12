@@ -1,11 +1,11 @@
 {{ $result := newScratch }}
 {{ $result.Set "posts" slice }}
-  {{ with .Site.GetPage "section" "posts" }}
+
 {{- range .Pages -}}
 
     {{ $result.Add "posts" ( dict "post" (slice .Permalink .Title (htmlUnescape .Content)) ) }}
   {{ end }}
-{{ end }}
+
     
 {{ $d :=  $result.Get "posts" }}
 {{ shuffle $d | jsonify }}

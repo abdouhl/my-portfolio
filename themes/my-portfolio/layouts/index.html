@@ -12,18 +12,42 @@
         '[[b;#fff;]posts]   see all blog posts',
         
     ];  
+    
   var term = $('body').terminal({
-    help: function() {
+      projects: function() {
+
+    {{ with .Site.GetPage "section" "projects" }}
+        var projects = $('<div class="pure-g">{{- range .Pages -}}<div class="image-card pure-u-1-3">{{ $img_screen := .Resources.GetMatch "screen.png" }}<img src="{{ $img_screen.Permalink }}" alt="{{ .Title }} image" style="height:200px;margin-right:15px;float: left;" ><div><h3>{{ .Title }}</h3><p>{{ .Params.description }}</p><div><dl><dt>tools</dt>{{ range .Params.tools }}<dd>- {{.}}</dd> {{- end -}}</dl></div></div></div>{{- end -}}</div>');
+/*
+<div class="pure-g">
+{{- range .Pages -}}
+<div class=" pure-u-1-3">
+{{ $img_screen := .Resources.GetMatch "screen.png" }}
+<img src="{{ $img_screen.Permalink }}" alt="{{ .Title }} image" style="height:170px;margin-right:15px;" >
+<div>
+<p>{{ .Title }}</p>
+<p>{{ .Content }}</p>
+</div>
+</div>
+{{- end -}}
+
+
+
+*/
+        this.echo(projects);
+    {{ end }}
+    
+    },help: function() {
        $.each( help, function( index ) {
        	term.echo(help[index])
        });
     },read: function(url) {
         var title;
         var content;
-    		$.getJSON( "posts/index.json", function( data ) {
+    		$.getJSON( url.split("/")[1]+"/index.json", function( data ) {
     		$.each( data, function( index ) {
     			var json_url = data[index]["post"][0] ;
-					if(json_url == "https://www.elhellal.com"+url){
+					if(json_url == {{ if .Site.IsServer }}"http://localhost:1313"{{ else }}"https://www.elhellal.com"{{ end }}+url){
 						title = data[index]["post"][1] ;
 					  content = $.parseHTML(data[index]["post"][2].replaceAll('\n', '')) ;
 					  content = content
@@ -45,13 +69,12 @@
     posts: function() {
 
     {{ with .Site.GetPage "section" "posts" }}
-        var img = $('<ul>{{- range .Pages -}}<li><a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a></li>{{- end -}}</ul>');
-        this.echo(img);
+        var posts = $('<ul>{{- range .Pages -}}<li><a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a></li>{{- end -}}</ul>');
+        this.echo(posts);
     {{ end }}
     $( ".title" ).click(function(event) {
 			event.preventDefault();
 			var a_link = $(this).attr( "href" );
-			
 			term.exec("read "+a_link, false);
 		});
     }

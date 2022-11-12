@@ -1,11 +1,21 @@
-a {
+a.title {
   text-decoration-style: dotted;
   color: white;
 }
 
-a:hover {
+a.title:hover {
   text-decoration-style: solid;
 }
 li {
   padding: 2px;
 }
+.image-card {
+	border-style: dotted;
+	border-color: white;
+  margin: 5px;
+  padding:10px; 
+}
+.image-card:hover {
+	border-style: solid;
+}
+
