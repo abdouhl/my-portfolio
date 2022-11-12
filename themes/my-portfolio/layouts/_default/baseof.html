@@ -5,11 +5,13 @@
 <script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.x.x/css/jquery.terminal.min.css"/>
 <link rel="stylesheet" href="css/styles.css">
+
+
     {{- partial "head.html" . -}}
     </head>
     <body>
         {{- partial "header.html" . -}}
-        
+        <script src="js/index.js"></script>
         {{- block "main" . }}{{- end }}
 
         {{- partial "footer.html" . -}}

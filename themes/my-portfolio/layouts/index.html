@@ -8,9 +8,16 @@
         '  / ___ \\| |_) | (_| | | |___| |  | | | (_| | | | | | | | | | (_| | | | |  __/ |  _  | |___| |___| |___ / ___ \\| |___ ',
         ' /_/   \\_\\_.__/ \\__,_| |_____|_|  |_|  \\__,_|_| |_|_| |_| |_|\\__,_|_| |_|\\___| |_| |_|_____|_____|_____/_/   \\_\\_____|'
     ];
-    
+  var help = [
+        '[[b;#fff;]posts]   see all blog posts',
+        
+    ];  
   var term = $('body').terminal({
-    read: function(url) {
+    help: function() {
+       $.each( help, function( index ) {
+       	term.echo(help[index])
+       });
+    },read: function(url) {
         var title;
         var content;
     		$.getJSON( "posts/index.json", function( data ) {
@@ -52,10 +59,9 @@
     greetings: false,
     onInit() {
     	    var title = this.cols() > banner[1].length ? banner.join('\n') : 'Abd Errahmane HELLAL';
-    	    title = title + '\n\n' + 'use [[;#fff;]help] to see the available commands' +
-               ' or [[;#fff;]credits] to list the projects used\n';
+    	    title = title + '\n\n' + 'Available commands: [[b;#fff;]posts], [[b;#fff;]projects], [[b;#fff;]about], [[b;#fff;]contact].\nType [[b;#fff;]help] for more info.';
             this.echo(title)
-              
+            $('[data-index="0"]').css("text-align","center");
         }
 });
 
