@@ -1,0 +1,11 @@
+{{ $result := newScratch }}
+{{ $result.Set "posts" slice }}
+
+{{- range .Pages -}}
+
+    {{ $result.Add "posts" ( dict "post" (slice .Permalink .Title (htmlUnescape .Content)) ) }}
+  {{ end }}
+
+    
+{{ $d :=  $result.Get "posts" }}
+{{ shuffle $d | jsonify }}

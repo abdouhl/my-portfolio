@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5, h6, b {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+a.title {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: white;
+}
+
+a.title:hover {
+  text-decoration-style: solid;
+}
+li {
+  padding: 2px;
+}
+.image-card2 {
+  height:200px;
+	border-style: dotted;
+	border-color: white;
+  margin: 5px;
+  padding:10px; 
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.image-card2:hover {
+	border-style: solid;
+}
+
