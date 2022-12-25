@@ -1,6 +1,6 @@
 {{ define "main" }}
 <header class="flex flex-row justify-center md:m-4">
-<div class="w-full md:w-11/12 lg:w-8/12 max-w-4xl bg-black md:rounded-md text-white mx-auto divide-y divide-zinc-400 divide-dashed">
+<div class="w-full md:w-11/12 lg:w-8/12 max-w-4xl bg-black md:rounded-md text-white	 mx-auto divide-y divide-zinc-400 divide-dashed">
 <pre  class="w-min mx-auto text-zinc-400"><div class="w-min headerlogo">
    ___   __      __                 __                         __ ________   __   ___   __ 
   / _ | / /  ___/ /__ ___________ _/ /  __ _  ___ ____  ___   / // / __/ /  / /  / _ | / / 
@@ -11,17 +11,24 @@
 <nav class="flex flex-row justify-center gap-2 py-2">
   <a href='/posts/' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">posts</a>
   <a href='#' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">projects</a>
-  <a href='/' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">about</a>
+  <a  class="p-1 text-zinc-400 bg-zinc-400 text-black">about</a>
   <a href='#' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">contact</a>
 </nav>
 </div>
 </header>
 <main class=" flex flex-row justify-center md:m-4">
-<div class="w-full md:w-11/12 lg:w-8/12 max-w-4xl bg-black rounded-md text-white mx-auto mx-2 my-2 p-4">
-<section class="container list">
-    <h2 class="font-bold text-l md:text-2xl mb-2">{{ .Title }}:</h2>
-    <div class="md:pl-2">{{ .Content }}</div>
-  </section>
+<div class="w-full md:w-11/12 lg:w-8/12 max-w-4xl bg-black rounded-md text-white	 mx-auto mx-2 my-2 p-2">
+	<h3 class="mt-1 font-bold text-xl" >Contact Me:</h3>
+	<form class="flex flex-col gap-4 md:pl-2 my-4" action="https://send.pageclip.co/DPHSqmIHlFNQGo7kTVPJTsT17ZhFBXPa/contact" class="pageclip-form" method="post">
+  <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
+  <input class="bg-black border-2 px-2 py-1 " type="text" name="name" value="Roscoe Jones" />
+  <input class="bg-black border-2 px-2 py-1 " type="email" name="email" value="roscoe@example.com" />
+
+  <!-- This button will have a loading spinner. Keep the inner span for best results. -->
+  <button type="submit" class="pageclip-form__submit">
+    <span>Send</span>
+  </button>
+</form>
 </div>
 </main>
 {{ end }}
