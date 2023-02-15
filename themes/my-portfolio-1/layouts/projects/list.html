@@ -9,8 +9,8 @@
                                                                                            
 </div></pre>
 <nav class="flex flex-row justify-center gap-2 py-2">
-  <a  class="p-1 text-zinc-400 bg-zinc-400 text-black">posts</a>
-  <a href='/projects/' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">projects</a>
+  <a href='/posts/' class="p-1 text-zinc-400 bg-zinc-400 text-black">posts</a>
+  <a  class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">projects</a>
   <a href='/' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">about</a>
   <a href='#' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">contact</a>
 </nav>
@@ -19,14 +19,31 @@
 <main class=" flex flex-row justify-center md:m-4">
 <div class="w-full md:w-11/12 lg:w-8/12 max-w-4xl bg-black rounded-md text-white mx-auto mx-2 my-2 p-4">
 <section class="container list">
-    <h2 class="font-bold text-l md:text-2xl ">Posts:</h2>
-    <ul class="pl-8  list-disc list-inside">
+    <h2 class="font-bold text-l md:text-2xl py-2">Projects:</h2>
       {{- range .Paginator.Pages -}}
-	    <li>
-	      <a class="title text-zinc-400 underline decoration-dashed hover:decoration-solid underline-offset-4" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a>
-	    </li>
+	    
+	      <a class="title text-zinc-400 border-zinc-400" href="{{ .Params.externalLink | default .RelPermalink }}">
+	              <div class="border-2 border-dashed hover:border-solid  p-2 flex flex-col md:flex-row md:h-64 gap-2 md:ml-2" >
+
+              {{ $img_screen := .Resources.GetMatch "screen.png" }}<img src="{{ $img_screen.Permalink }}" alt="{{ .Title }} image" >
+              <div>
+                 <h3 class=" font-bold pt-2">{{ .Title }}</h3>
+                 <p>{{ .Params.description }}</p>
+                 <div>
+                    <dl>
+                       <dt class=" font-bold ">Tools</dt>
+                       {{ range .Params.tools }}
+                       <dd>- {{.}}</dd>
+                       {{- end -}}
+                    </dl>
+
+              </div>
+           </div>
+        </div>
+        </a>
+	    
       {{- end -}}
-    </ul>
+    
 
     {{ partial "pagination.html" . }}
   </section>
