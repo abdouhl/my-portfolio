@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>elhellal.com/ar/sitemap.xml</loc>
-    
-      <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>elhellal.com/en/sitemap.xml</loc>
-    
-      <lastmod>2022-07-25T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/posts/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/code-quality/</loc>
+  </url><url>
+    <loc>http://localhost:1313/contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/how-to-become-a-self-taught-programmer/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/improving-code/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/programmer/</loc>
+  </url><url>
+    <loc>http://localhost:1313/projects/quotes-and-sayings/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/self-taught/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/tips-for-improving-code-quality-and-readability/</loc>
+  </url>
+</urlset>

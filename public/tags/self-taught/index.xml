@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Self-Taught on Abdou HLL</title>
+    <link>http://localhost:1313/tags/self-taught/</link>
+    <description>Recent content in Self-Taught on Abdou HLL</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/tags/self-taught/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to become a self-taught programmer</title>
+      <link>http://localhost:1313/posts/how-to-become-a-self-taught-programmer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-become-a-self-taught-programmer/</guid>
+      <description>Becoming a self-taught programmer can be a challenging but rewarding journey. With the rise of online resources and the abundance of free educational materials, anyone can become a programmer with the right mindset and determination. In this article, we&amp;rsquo;ll outline a step-by-step guide on how to become a self-taught programmer, and provide resources and tips to help you along the way. Step 1: Choose a programming language The first step to becoming a self-taught programmer is to choose a programming language.</description>
+    </item>
+  </channel>
+</rss>
