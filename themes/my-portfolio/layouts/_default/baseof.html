@@ -2,24 +2,34 @@
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
-		<link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-		
-		
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="https://unpkg.com/jquery.terminal@2.x.x/js/jquery.terminal.min.js"></script>
-		<link rel="stylesheet" href="https://unpkg.com/jquery.terminal@2.x.x/css/jquery.terminal.min.css"/>
-		<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/forms.js"></script>
-		<link rel="stylesheet" href="css/styles.css">
-		{{- partial "head.html" . -}}
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<style> @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap'); </style>
+		<style type="text/tailwindcss">
+    @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #content h2,h3 {
+    @apply my-4 md:text-xl;
+  }
+  #content p {
+    @apply my-2;
+  }
+  #content li {
+   list-style-position: revert;
+    @apply list-decimal ml-8;
+  }
+}
+  </style>
+		<link rel="stylesheet" href="/css/styles.css">
 	</head>
-	<body>
+	<body class="bg-zinc-200 " style="font-family: 'Space Mono', monospace;">
 	  {{- partial "header.html" . -}}
 	  <script src="js/index.js"></script>
 	  {{- block "main" . }}{{- end }}
 	  {{- partial "footer.html" . -}}
-	  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
 	</body>
 </html>

@@ -1,118 +1,87 @@
 {{ define "main" }}
+<header class="flex flex-row justify-center md:m-4">
+<div class="w-full md:w-11/12 lg:w-8/12 max-w-4xl bg-black md:rounded-md text-white	 mx-auto divide-y divide-zinc-400 divide-dashed">
+<pre  class="w-min mx-auto text-zinc-400"><div class="w-min headerlogo">
+   ___   __      __                 __                         __ ________   __   ___   __ 
+  / _ | / /  ___/ /__ ___________ _/ /  __ _  ___ ____  ___   / // / __/ /  / /  / _ | / / 
+ / __ |/ _ \/ _  / -_) __/ __/ _ `/ _ \/  ' \/ _ `/ _ \/ -_) / _  / _// /__/ /__/ __ |/ /__
+/_/ |_/_.__/\_,_/\__/_/ /_/  \_,_/_//_/_/_/_/\_,_/_//_/\__/ /_//_/___/____/____/_/ |_/____/
+                                                                                           
+</div></pre>
+<nav class="flex flex-row justify-center gap-2 py-2">
+  <a href='/posts/' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">posts</a>
+  <a href='/projects/' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">projects</a>
+  <a  class="p-1 text-zinc-400 bg-zinc-400 text-black">about</a>
+  <a href='#' class="p-1 text-zinc-400 hover:bg-zinc-400 hover:text-black">contact</a>
+</nav>
+</div>
+</header>
+<main class=" flex flex-row justify-center md:m-4">
+<div class="w-full md:w-11/12 lg:w-8/12 max-w-4xl bg-black rounded-md text-white	 mx-auto mx-2 my-2 p-2">
+<h2 class="text-center font-bold text-l md:text-2xl">Hi 👋, I'm Abderrahman HELLAL</h2>
+<p class="text-zinc-400 text-center">A passionate developer from <b class="text-white">Algeria 🇩🇿</b></p>
+<br/>
+<p>I'm a Self-Taught Web Developer, I often find myself enjoy doing Developing Tools for the community, especially for Twitter.</p>
+<br/>
+<p class="text-zinc-400">- 🔭 I’m currently working on <a class="text-white underline decoration-dashed hover:decoration-solid underline-offset-4" href="https://www.turntweetinto.com/">turn tweet into</a> & <a class="text-white underline decoration-dashed hover:decoration-solid underline-offset-4" href="https://quotesandsayings.net/">Quotes and Sayings</a></p>
 
-  <script>
-  var banner = [
-        '     _    _         _   _____                _                                  _   _ _____ _     _        _    _     ',
-        '    / \\  | |__   __| | | ____|_ __ _ __ __ _| |__  _ __ ___   __ _ _ __   ___  | | | | ____| |   | |      / \\  | |    ',
-        "   / _ \\ | '_ \\ / _` | |  _| | '__| '__/ _` | '_ \\| '_ ` _ \\ / _` | '_ \\ / _ \\ | |_| |  _| | |   | |     / _ \\ | |    ",
-        '  / ___ \\| |_) | (_| | | |___| |  | | | (_| | | | | | | | | | (_| | | | |  __/ |  _  | |___| |___| |___ / ___ \\| |___ ',
-        ' /_/   \\_\\_.__/ \\__,_| |_____|_|  |_|  \\__,_|_| |_|_| |_| |_|\\__,_|_| |_|\\___| |_| |_|_____|_____|_____/_/   \\_\\_____|'
-    ];
-  var help = [
-        '[[b;#fff;]posts]   see all blog posts',
-        
-    ];  
+<p class="text-zinc-400">- 🌱  I’m constantly learning <b class="text-white" >Nuxt 3, FastAPI & BASH</b></p>
+<p class="text-zinc-400">- 📫 How to reach me <a class="text-white underline decoration-dashed hover:decoration-solid underline-offset-4" href="mailto:abderrahmane@elhellal.com">abderrahmane@elhellal.com</a></p>
 
-/*
-<form action="https://send.pageclip.co/DPHSqmIHlFNQGo7kTVPJTsT17ZhFBXPa/contact" class="pageclip-form" method="post">
+<br />
 
-  <input type="email" name="email"  />
-  <input type="text" name="subject"  />
+<h3 class="mt-1 font-bold text-xl" >Languages and Tools:</h3>
+<p class="inline-flex flex-wrap	 gap-2 align-middle"> 
+	<img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-official.svg" title="Bash" alt="bash" width="40" height="40"/>
+	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" title="CSS" alt="css3" width="40" height="40"/>
+	<img src="https://cdn.worldvectorlogo.com/logos/django.svg" title="Django" alt="django" width="40" height="40"/>
+	<img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" title="Git" alt="git" width="40" height="40"/>
+	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" title="HTML" alt="html5" width="40" height="40"/>
+	<img src="https://api.iconify.design/logos-hugo.svg" title="Hugo" alt="hugo" width="40" height="40"/>
+	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="javascript" width="40" height="40"/>
+	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" title="Linux" alt="linux" width="40" height="40"/> 
+	<img src="https://www.vectorlogo.zone/logos/nuxtjs/nuxtjs-icon.svg" title="Nuxt3" alt="nuxtjs" width="40" height="40"/>
+	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" title="Python"  alt="python" width="40" height="40"/>
+	<img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" title="Selenium" alt="selenium" width="40" height="40"/>
+	<img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" title="Tailwind" alt="tailwind" width="40" height="40"/>
+	<img src="https://cdn.worldvectorlogo.com/logos/fastapi-1.svg" title="Fastapi" class="object-contain" alt="fastapi" width="40" height="40"/>
+	
+	</p>
+<br/>
+<br/>
+<p align="center">
+<img src="https://github-readme-stats.vercel.app/api?username=abdouhl&show_icons=true&locale=en&theme=dark" alt="abdouhl" />
+<br>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=abdouhl&theme=dark" alt="abdouhl" />
+</p>
 
-  <button type="submit" class="pageclip-form__submit">
-    <span>Send</span>
-  </button>
-</form>
-*/
-  var term = $('body').terminal({
-      contact: function() {
+<br>
+<p align="center">
+ <a href="https://twitter.com/abdou_hll" target="blank">
+ <img src="https://img.shields.io/twitter/follow/abdou_hll?logo=twitter&style=for-the-badge" alt="abdou_hll" />
+ </a>
+</p>
 
+<h3 align="center">Connect with me:</h3>
+<div align="center" class="flex justify-center p-2 gap-4">
+<a href="https://twitter.com/abdou_hll" target="blank">
+<svg xmlns="http://www.w3.org/2000/svg" align="center" height="30" width="40" fill="white" viewBox="0 0 16 16">
+  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/abderrahmane-hellal-8197771b8/" target="blank">
+<svg xmlns="http://www.w3.org/2000/svg" align="center" height="30" width="40" fill="white" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+</svg>
+</a>
 
-        var spec = [
-            {
-                type: $.terminal.forms.types.input,
-                message: '\nWhat is your name?',
-                prompt: 'name: ',
-                name: 'name'
-            },
-            {
-                type: $.terminal.forms.types.input,
-                message: '\nWhat is your email?',
-                prompt: 'email: ',
-                name: 'email'
-            },
-            {
-                type: $.terminal.forms.types.input,
-                message: '\nWhat is your subject?',
-                prompt: 'subject: ',
-                name: 'subject'
-            }
-        ];
-         $.terminal.forms.form(term, spec).then(form => {
-            var contact = '<form id="contact-form" action="https://send.pageclip.co/DPHSqmIHlFNQGo7kTVPJTsT17ZhFBXPa/contact" class="pageclip-form" method="post" style="display: none;"> <input type="name" name="name" value="'+form['name']+'""/><input type="email" name="email" value="'+form['email']+'""/><input type="text" name="subject" value="'+form['subject']+'"/><button type="submit" class="pageclip-form__submit"><span>Send</span></button></form>';
-            term.echo($(contact));
-            $("#contact-form").submit();  
-        });
-    }, about: function() {
-       var about = '<h1 align="center">Hi 👋, I\'m Abderrahman HELLAL</h1><h3 align="center">A passionate developer from Algeria</h3><p>- 🔭 I’m currently working on <a class="title" href="https://abdouhl.pythonanywhere.com/">turn tweet into</a></p><p>- 🌱 I’m currently learning <b>django</b></p><h3 align="left">Languages and Tools:</h3><p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://gohugo.io/" target="_blank" rel="noreferrer"> <img src="https://api.iconify.design/logos-hugo.svg" alt="hugo" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> </p>';
-       this.echo($(about));
-    },projects: function() {
+<a href="https://github.com/abdouhl" target="blank">
+<svg xmlns="http://www.w3.org/2000/svg" align="center" height="30" width="40" fill="white" viewBox="0 0 16 16">
+  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+</svg>
+</a>
+</div>
 
-    {{ with .Site.GetPage "section" "projects" }}
-        var projects = $('<div class="pure-g">{{- range .Pages -}}<div class="image-card pure-u-1  pure-u-md-1-2 pure-u-xl-1-3 pure-u-xxl-1-4" onclick="'+"window.location.href='{{ .Params.link }}';"+'"><div class="image-card2">{{ $img_screen := .Resources.GetMatch "screen.png" }}<img src="{{ $img_screen.Permalink }}" alt="{{ .Title }} image" style="height:200px;margin-right:15px;float: left;" ><div><h3>{{ .Title }}</h3><p>{{ .Params.description }}</p><div><dl><dt>tools</dt>{{ range .Params.tools }}<dd>- {{.}}</dd> {{- end -}}</dl></div></div></div></div>{{- end -}}</div>');
-        this.echo(projects);
-    {{ end }}
-    
-    },help: function() {
-       $.each( help, function( index ) {
-       	term.echo(help[index])
-       });
-    },read: function(url) {
-        var title;
-        var content;
-    		$.getJSON( url.split("/")[1]+"/index.json", function( data ) {
-    		$.each( data, function( index ) {
-    			var json_url = data[index]["post"][0] ;
-					if(json_url == {{ if .Site.IsServer }}"http://localhost:1313"{{ else }}"https://www.elhellal.com"{{ end }}+url){
-						title = data[index]["post"][1] ;
-					  content = $.parseHTML(data[index]["post"][2].replaceAll('\n', '')) ;
-					  content = content
-					  content = content
-					  content = content
-					  $.each(content, function( index ) {
-					  console.log($(this).text());
-					  if($(this).not("#text")){
-					  console.log(content[index])
-						term.echo(content[index]);
-						}
-						});
-					}
-				});
-    		});
-        
-        
-    },
-    posts: function() {
-
-    {{ with .Site.GetPage "section" "posts" }}
-        var posts = $('<ul>{{- range .Pages -}}<li><a class="title" href="{{ .Params.externalLink | default .RelPermalink }}">{{ .Title }}</a></li>{{- end -}}</ul>');
-        this.echo(posts);
-    {{ end }}
-    $( ".title" ).click(function(event) {
-			event.preventDefault();
-			var a_link = $(this).attr( "href" );
-			term.exec("read "+a_link, false);
-		});
-    }
-}, {
-    greetings: false,
-    onInit() {
-    	    var title = this.cols() > banner[1].length ? banner.join('\n') : 'Abd Errahmane HELLAL';
-    	    title = title + '\n\n' + 'Available commands: [[b;#fff;]posts], [[b;#fff;]projects], [[b;#fff;]about], [[b;#fff;]contact].\nType [[b;#fff;]help] for more info.';
-            this.echo(title)
-            $('[data-index="0"]').css("text-align","center");
-        }
-});
-
- </script>
+</div>
+</main>
 {{ end }}
