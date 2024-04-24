@@ -1,9 +1,10 @@
-{{ $page_url := cast.ToString .CurrentSection.RelPermalink }}
+{{ $page_url := cast.ToString .Path }}
+
 {{ $pages_urls := slice 
-    (dict "name" "posts" "url" "/posts/") 
-    (dict "name" "projects" "url" "/projects/") 
-    (dict "name" "about" "url" "/") 
-    (dict "name" "contact" "url" "#") }}
+    (dict "name" "posts" "url" "/posts/" "num" -1) 
+    (dict "name" "projects" "url" "/projects/" "num" -1) 
+    (dict "name" "about" "url" "/" "num" 1) 
+    (dict "name" "contact" "url" "#" "num" -1) }}
 
 <header class="flex flex-row justify-center md:mb-4">
   <div
@@ -16,9 +17,13 @@
 /_/ |_/_.__/\_,_/\__/_/ /_/  \_,_/_//_/_/_/_/\_,_/_//_/\__/ /_//_/___/____/____/_/ |_/____/
                                                                                            
 </div></pre>
+
+
+
     <nav class="flex flex-row justify-center gap-2 py-2">
       {{ range $pages_urls }}
-        {{ if (eq $page_url  .url ) }} 
+      
+        {{ if (eq $page_url  ( substr .url 0 .num ) ) }} 
         <a
             class="p-1 text-zinc-400"
             >{{ .name }}</a
